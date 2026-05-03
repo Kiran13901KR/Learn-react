@@ -1,0 +1,23 @@
+{
+  "name": "learn-react",
+  "version": "1.0.0",
+  "description": "Learning React ",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kiran13901KR/Learn-react.git"
+  },
+  "keywords": [],
+  "author": "Kiran Hebbar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kiran13901KR/Learn-react/issues"
+  },
+  "homepage": "https://github.com/Kiran13901KR/Learn-react#readme",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  }
+}
