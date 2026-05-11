@@ -1,0 +1,129 @@
+.header {
+    display : flex;
+    justify-content: space-between;
+    border-style: groove;
+    border-width: thick;
+}
+.logo {
+width :100px;
+height: 86px;
+padding-left: 15px;
+
+}
+.Nav-items > ul {
+    display :flex;
+    list-style-type: none;
+    font-size:large;
+    
+}
+.Nav-items > ul > li {
+    
+    margin :10px;
+        padding: 6px 24px 5px 42px;
+}
+
+.search {
+    padding:20px;
+}
+
+.resto-container {
+    display:flex;
+    flex-wrap: wrap;   
+}
+
+.restro-card:hover{   
+    cursor:pointer;
+    border: 2px solid black;
+}
+
+.restro-card{
+    margin:5px;
+    text-align: center;
+    width: 200px;
+     /* border: 2px solid black; */
+     padding:1px;
+    background-color:lavender;
+   
+    
+}
+.reso-food {
+    height:100px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.rating{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.icon{
+    border-radius: 8px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Resize footer social icons (inline SVGs) */
+.icon svg{
+    width: 22px;
+    height: 22px;
+}
+
+/* Footer SVGs (inline icons) */
+.footer-left svg{
+    width: 18px;
+    height: 18px;
+}
+
+
+.page{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.body-area{
+    flex: 1;
+}
+
+.footer{
+    background: #d3d3d3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 20px; /* reduced vertical size */
+}
+
+
+/* Left side */
+.footer-left{
+    display: flex;
+    gap: 15px;
+}
+
+.footer-left img{
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+/* Center text */
+.footer-center{
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.footer-center p{
+    margin: 0;
+    font-size: 12px;
+}
+
+/* Right section */
+.footer-right{
+    width: 80px;
+}

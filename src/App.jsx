@@ -1,0 +1,25 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Header } from "./components/Header";
+import { Body } from "./components/Body";
+import Footer from "./components/Footer";
+import "../App.css";
+
+const StyleCard = {
+  backgroundColor: "beige",
+};
+
+const AppLayout = () => {
+  return (
+    <div className="page">
+      <Header />
+      <div className="body-area">
+        <Body />
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<AppLayout />);
