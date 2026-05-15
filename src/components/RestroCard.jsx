@@ -3,20 +3,27 @@ import ReactDOM from "react-dom/client";
 
 
 export const RestroCard = ({ resData }) => {
-  const {RestaurentImg,RestaurentName,City,Cuisine,Ratings} = resData;
+  const {
+    cloudinaryImageId,
+    name,
+    locality,
+    cuisines,
+    avgRating,
+  } = resData;
+
   return (
     <div className="restro-card">
       <img
         className="reso-food"
-        src={RestaurentImg}
-        alt={RestaurentName}
+        src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`}
+        alt={name}
         loading="lazy"
       />
       <div className="restro-details">
-        <div>{RestaurentName}</div>
-        <div>{City}</div>
-        <div>{Cuisine}</div>
-        <div>{Ratings}</div>
+        <h3>{name}</h3>
+        <p>{locality}</p>
+        <p>{Array.isArray(cuisines) ? cuisines.join(", ") : cuisines}</p>
+        <p>⭐ {avgRating}</p>
       </div>
     </div>
   );

@@ -1,25 +1,62 @@
 .header {
-    display : flex;
-    justify-content: space-between;
-    border-style: groove;
-    border-width: thick;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 18px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  gap: 16px;
+  min-height: 64px;
 }
-.logo {
-width :100px;
-height: 86px;
-padding-left: 15px;
 
+.logo {
+  width: 110px;
+  height: auto;
+  object-fit: contain;
 }
+
+.Nav-items {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
 .Nav-items > ul {
-    display :flex;
-    list-style-type: none;
-    font-size:large;
-    
+  cursor: pointer;
+  display: flex;
+  list-style: none;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  gap: 18px;
 }
+
 .Nav-items > ul > li {
-    
-    margin :10px;
-        padding: 6px 24px 5px 42px;
+  margin: 0;
+  padding: 4px 0;
+  color: #111827;
+  transition: color 0.2s ease;
+}
+
+.Nav-items > ul > li:hover {
+  color: #1f2937;
+}
+
+.login-Header {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 999px;
+  background-color: #111827;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.login-Header:hover {
+    background-color: #111827;
+    transform: translateY(-1px);
 }
 
 .search {
@@ -31,25 +68,57 @@ padding-left: 15px;
     flex-wrap: wrap;   
 }
 
-.restro-card:hover{   
-    cursor:pointer;
-    border: 2px solid black;
+.restro-card {
+  margin: 10px;
+  border-radius: 12px;
+  width: 250px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-.restro-card{
-    margin:5px;
-    text-align: center;
-    width: 200px;
-     /* border: 2px solid black; */
-     padding:1px;
-    background-color:lavender;
-   
-    
+.restro-card:hover {
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
+
 .reso-food {
-    height:100px;
-    width: 200px;
-    object-fit: cover;
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.restro-details {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.restro-details h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1c1c1c;
+  text-align: left;
+}
+
+.restro-details p {
+  margin: 0;
+  font-size: 14px;
+  color: #686b78;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.restro-details p:last-child {
+  color: #ffa500;
+  font-weight: 600;
 }
 
 .rating{
@@ -79,51 +148,66 @@ padding-left: 15px;
 }
 
 
-.page{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.body-area{
-    flex: 1;
+.body-area {
+  flex: 1;
 }
 
-.footer{
-    background: #d3d3d3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3px 20px; /* reduced vertical size */
+.footer {
+  background: #f8fafc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 13px;
+  color: #4b5563;
 }
 
-
-/* Left side */
-.footer-left{
-    display: flex;
-    gap: 15px;
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.footer-left img{
-    width: 10px;
-    height: 10px;
-    cursor: pointer;
+.footer-left img {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
 }
 
-/* Center text */
-.footer-center{
-    flex: 1;
-    text-align: center;
-    font-weight: bold;
-    font-size: 12px;
+.footer-center {
+  flex: 1;
+  text-align: center;
 }
 
-.footer-center p{
-    margin: 0;
-    font-size: 12px;
+.footer-center p {
+  margin: 0;
+  line-height: 1.4;
 }
 
-/* Right section */
-.footer-right{
-    width: 80px;
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Button {
+  padding: 10px 16px;
+  background-color:darkgray;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.Button:hover {
+  background-color: #1f2937;
 }
