@@ -1,15 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-
 
 export const RestroCard = ({ resData }) => {
-  const {
-    cloudinaryImageId,
-    name,
-    locality,
-    cuisines,
-    avgRating,
-  } = resData;
+  const { cloudinaryImageId, name, locality, cuisines, avgRating } = resData;
 
   return (
     <div className="restro-card">
@@ -24,7 +16,21 @@ export const RestroCard = ({ resData }) => {
         <p>{locality}</p>
         <p>{Array.isArray(cuisines) ? cuisines.join(", ") : cuisines}</p>
         <p>⭐ {avgRating}</p>
+        {/* <Link to={`/Restaurents/${resData.id}`}>
+          <button>Restro Details</button>
+        </Link> */}
       </div>
     </div>
   );
+};
+
+export const RestroPromoted = (RestroCard) => {
+  return (props) => {
+   return (
+  <div className="card-wrapper">
+    <span className="promoted-badge">Promoted</span>
+    <RestroCard {...props} />
+  </div>
+);
+  };
 };

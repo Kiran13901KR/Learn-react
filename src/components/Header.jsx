@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import LOGO_URL from "../utils/constants";
+import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
+import Toggle from "./Toggle";
+import userContext from "../utils/userContext";
+
 
 const Header = ({ loggedIn, onLogin, onLogout }) => {
+
+    const { theme, setTheme } = useContext(userContext);
+    console.log("theme", userContext);
   // const formLogin = () => {
   //   if (loggedIn) {
   //     onLogout();
@@ -21,6 +29,13 @@ const Header = ({ loggedIn, onLogin, onLogout }) => {
   //     alert("Invalid credentials. Please try again.");
   //   }
   // };
+  const onlineStatus=useOnlineStatus();
+  console.log("onlineStatus", onlineStatus);
+
+
+
+  const handleToggle = () => setTheme(prev => !prev);
+
 
   return (
     <div className="header">
@@ -28,15 +43,23 @@ const Header = ({ loggedIn, onLogin, onLogout }) => {
         <img className="logo" src={LOGO_URL} />
       </div>
       <div className="Nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact</li>
-          <li>Cart</li>
-        </ul>
-        <button className="login-Header" >
-          Login
-        </button>
+        
+            <h5>Online Status : {onlineStatus ? "🟢" : "🔴"}</h5>
+            <Link to="/">Home</Link>
+        
+         
+            <Link to="/About">About Us</Link>
+          
+          
+             <Link to="/Contact">Contact</Link>
+          
+         
+            <Link to="/Cart">Cart</Link>
+            
+            <Link to="/Grocery">Grocery</Link>
+           
+        <button className="login-Header">Login</button>
+        <Toggle isOn={theme} handleToggle={handleToggle} />
       </div>
     </div>
   );
