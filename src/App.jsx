@@ -14,6 +14,8 @@ import Shimmer from "./components/Shimmer";
 import userContext from "./utils/userContext";
 import { UserProvider } from "./utils/userContext";
 import { useContext } from "react";
+import {Provider} from "react-redux";
+import appStore from "./reduxStore/appStore";
 
 const Grocery = lazy(() => import("./components/Grocery"));
 
@@ -32,6 +34,7 @@ const { theme } = useContext(userContext);
   // };
 
   return (
+    <Provider store={appStore}>
     <div className={`page ${theme ? "dark" : "light"}`}>
         <Header />
         {/* loggedIn={loggedIn} onLogin={handleLogin} onLogout={handleLogout} */}
@@ -46,6 +49,7 @@ const { theme } = useContext(userContext);
 
         <Footer />
     </div>
+    </Provider>
   );
 };
 

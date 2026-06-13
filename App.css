@@ -59,6 +59,14 @@
     transform: translateY(-1px);
 }
 
+.cart-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
 .search {
     padding:20px;
 }
@@ -326,4 +334,242 @@
 }
 .page.dark .login-Header {
   background-color: #374151;
+}
+
+/* Menu styles */
+.menu-page {
+  padding: 28px 40px;
+}
+.menu-header h2 {
+  font-size: 22px;
+  margin: 0 0 18px 0;
+  font-weight: 800;
+}
+.menu-category {
+  margin-bottom: 8px;
+}
+.category-title {
+  font-size: 18px;
+  margin: 6px 0 12px 0;
+  font-weight: 700;
+}
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid #e6e6e6;
+  align-items: flex-start;
+}
+.menu-item-left {
+  display: flex;
+  gap: 16px;
+  flex: 1 1 auto;
+}
+.veg-indicator {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 2px solid #34d399;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  background: white;
+}
+.veg-indicator.veg {
+  background: #34d399;
+}
+.veg-indicator.non-veg {
+  background: #f87171;
+}
+.item-info {
+  flex: 1;
+}
+.item-title {
+  margin: 0 0 6px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+.item-meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.item-price {
+  color: #111827;
+  font-weight: 700;
+}
+.item-rating {
+  color: #10b981;
+  font-weight: 700;
+}
+.item-desc {
+  margin: 0;
+  color: #6b7280;
+}
+.menu-item-right {
+  width: 160px;
+  flex-shrink: 0;
+}
+.item-image-wrap {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-left: auto;
+}
+.item-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.add-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  background: white;
+  color: #059669;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-weight: 800;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  border: none;
+  cursor: pointer;
+}
+.qty-controls{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  display:flex;
+  gap:8px;
+  background: white;
+  padding: 4px 8px;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+.qty-btn{
+  width:28px;
+  height:28px;
+  border-radius:6px;
+  border:none;
+  background:#10b981;
+  color:white;
+  font-weight:800;
+  cursor:pointer;
+}
+.qty{
+  min-width:20px;
+  text-align:center;
+  font-weight:700;
+}
+.customizable {
+  text-align: center;
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 8px;
+}
+
+.item-image-placeholder {
+  width: 120px;
+  height: 120px;
+  background: #f3f4f6;
+  border-radius: 12px;
+}
+
+.page.dark .menu-page {
+  background: transparent;
+}
+.page.dark .menu-item {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.page.dark .item-desc {
+  color: #9ca3af;
+}
+.page.dark .item-price {
+  color: #e6eef8;
+}
+.page.dark .item-title {
+  color: #fff;
+}
+.AddButton{
+  height:30px;
+  padding:0 16px;
+  background:green;
+ border-radius: 8px;
+font-weight: 600;
+transition: 0.2s;
+  color:white;
+  border:none;
+}
+.RemoveButton{
+  height:30px;
+  padding:0 16px;
+  background-color: #DC2626;
+  color: #ffffff;
+  border-radius: 8px;
+font-weight: 600;
+transition: 0.2s;
+  border:none;
+}
+
+.cart-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.cart-item {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item-header h3 {
+  margin: 0;
+}
+
+.price {
+  color: #ff5722;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.description {
+  color: #555;
+  margin: 10px 0;
+}
+
+.details {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+.cart-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.checkout-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }

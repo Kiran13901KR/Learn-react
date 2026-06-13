@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import Toggle from "./Toggle";
 import userContext from "../utils/userContext";
+import { useSelector } from "react-redux";
 
 
 const Header = ({ loggedIn, onLogin, onLogout }) => {
@@ -36,7 +37,9 @@ const Header = ({ loggedIn, onLogin, onLogout }) => {
 
   const handleToggle = () => setTheme(prev => !prev);
 
+const cart = useSelector((store) => store.cart.itemCart);
 
+console.log("cart", cart);
   return (
     <div className="header">
       <div>
@@ -54,7 +57,9 @@ const Header = ({ loggedIn, onLogin, onLogout }) => {
              <Link to="/Contact">Contact</Link>
           
          
-            <Link to="/Cart">Cart</Link>
+            <Link to="/Cart" className="cart-link">
+            🛒 {cart.length} items
+            </Link> 
             
             <Link to="/Grocery">Grocery</Link>
            
