@@ -1,20 +1,20 @@
-import React from "react";
+import React , {useState,useEffect} from "react";
 import { useDispatch } from "react-redux";
 import { addItem as addCartItem } from "../reduxStore/cartSlice";
 import { removeItem } from "../reduxStore/cartSlice";
 
 const RestaurentMenu = () => {
-
+const [itemData, setItemData] = useState();
 
   const dispatch = useDispatch();
-
+  
   // Dummy data fallback so the page can be worked on without the API.
   const dummyCategories = [
     {
       card: {
         card: {
           "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
-          title: "Recommended (20)",
+          title: `Recommended (${itemData})`,
           itemCards: [
             {
               card: {
@@ -70,6 +70,12 @@ const RestaurentMenu = () => {
 
   // Use API data when available, otherwise use dummyCategories for development.
   const categories = dummyCategories;
+  const itemCards = categories[0]?.card?.card?.itemCards || [];
+
+  useEffect(() => {
+  setItemData(itemCards.length);
+}, [itemCards.length]);
+
 
   const addRestoItem = (item) => {
     dispatch(addCartItem(item));

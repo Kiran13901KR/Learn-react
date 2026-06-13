@@ -48,20 +48,20 @@ console.log("cart", cart);
       <div className="Nav-items">
         
             <h5>Online Status : {onlineStatus ? "🟢" : "🔴"}</h5>
-            <Link to="/">Home</Link>
+            <Link to="/" className="cart-link">Home</Link>
         
          
-            <Link to="/About">About Us</Link>
+            <Link to="/About" className="cart-link">About Us</Link>
           
           
-             <Link to="/Contact">Contact</Link>
+             <Link to="/Contact" className="cart-link">Contact</Link>
           
          
             <Link to="/Cart" className="cart-link">
-            🛒 {cart.length} items
+            🛒  {cart.length} 
             </Link> 
             
-            <Link to="/Grocery">Grocery</Link>
+            <Link to="/Grocery" className="cart-link">Grocery</Link>
            
         <button className="login-Header">Login</button>
         <Toggle isOn={theme} handleToggle={handleToggle} />
